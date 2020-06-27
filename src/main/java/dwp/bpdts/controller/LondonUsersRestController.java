@@ -1,5 +1,6 @@
 package dwp.bpdts.controller;
 
+import dwp.bpdts.model.User;
 import dwp.bpdts.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +20,12 @@ public class LondonUsersRestController {
     UserService userService;
 
     @GetMapping(value = "/london/users")
-    public List<String> getLondonUsers() {
+    public List<User> getLondonUsers() {
 
-        return new ArrayList<>();
+        List<User> londonUsers = userService.getUsersInOrNearLondon();
+        log.info("Returning {} London users", londonUsers.size());
+
+        return new ArrayList<User>();
     }
 
 }
