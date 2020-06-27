@@ -1,6 +1,6 @@
 package dwp.bpdts;
 
-import dwp.bpdts.controller.HomeController;
+import dwp.bpdts.controller.LondonUsersRestController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ApiApplicationTests {
 
 	@Autowired
-	private HomeController controller;
+	private LondonUsersRestController controller;
 
 	@Test
 	void contextLoads() {
