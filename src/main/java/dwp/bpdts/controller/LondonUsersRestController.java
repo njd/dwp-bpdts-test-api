@@ -25,7 +25,7 @@ public class LondonUsersRestController {
         List<User> londonUsers = userService.getUsersInOrNearLondon();
         log.info("Returning {} London users", londonUsers.size());
 
-        return new ArrayList<User>();
+        return londonUsers;
     }
 
 }
