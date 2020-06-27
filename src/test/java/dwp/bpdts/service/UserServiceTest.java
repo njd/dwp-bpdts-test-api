@@ -23,6 +23,7 @@ class UserServiceTest {
     @Test
     void getUsersInOrNearLondon() {
         List<User> users = userService.getUsersInOrNearLondon();
-        assertEquals(0, users.size());
+        int expectedUserCount = 9;
+        assertEquals(expectedUserCount, users.size());
     }
 }

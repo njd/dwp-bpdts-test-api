@@ -20,7 +20,7 @@ class GeoServiceTest {
 
     @Test
     void milesLondonToElstree() {
-        Position london = new Position(geoService.LONDON_LATITUDE, geoService.LONDON_LONGITUDE);
+        Position london = new Position(GeoService.LONDON_LATITUDE, GeoService.LONDON_LONGITUDE);
         Position elstree = new Position(51.6441, -0.2982);
 
         Double expectedDistance = 12.2;
@@ -30,7 +30,7 @@ class GeoServiceTest {
 
     @Test
     void milesLondonToLeeds() {
-        Position london = new Position(geoService.LONDON_LATITUDE, geoService.LONDON_LONGITUDE);
+        Position london = new Position(GeoService.LONDON_LATITUDE, GeoService.LONDON_LONGITUDE);
         Position leeds = new Position(53.7905,-1.5430);
 
         Double expectedDistance = 168.9;
@@ -39,11 +39,11 @@ class GeoServiceTest {
     }
     @Test
     void milesToKm() {
-        assertEquals(1.60934, geoService.milesToKm(1.0), 0.0001);
+        assertEquals(1.60934, GeoService.milesToKm(1.0), 0.0001);
     }
 
     @Test
     void kmToMiles() {
-        assertEquals(1.0, geoService.kmToMiles(1.60934), 0.0001);
+        assertEquals(1.0, GeoService.kmToMiles(1.60934), 0.0001);
     }
 }

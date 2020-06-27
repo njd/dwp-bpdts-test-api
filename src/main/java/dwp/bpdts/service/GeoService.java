@@ -38,7 +38,7 @@ public class GeoService {
 
         double distanceInMiles = kmToMiles(distanceInKm);
 
-        log.debug("%s to %s is %f miles", from, to, distanceInMiles);
+        log.debug("{} to {} is {} miles", from, to, distanceInMiles);
         return distanceInMiles;
     }
 
